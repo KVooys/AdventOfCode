@@ -19,38 +19,38 @@ namespace AdventOfCode
         {
             //read the file, remove commas and spaces and put it into the coords array
             string lines = File.ReadAllText(@"C:\Users\Kurt\Documents\Visual Studio 2015\Projects\AdventOfCode\input.txt");
-            lines = lines.Replace(" ", string.Empty);           
+            lines = lines.Replace(" ", string.Empty);
             string[] coords = lines.Split(',');
 
             string loc = "";
-            List<String> locs = new List<String>();      
+            List<String> locs = new List<String>();
             char dir = 'n';
             char[] toTrim = { 'L', 'R' };
             int num = 0;
             int xpos = 0;
             int ypos = 0;
-            int total = 0;       
+            int total = 0;
 
-            foreach(string c in coords)
+            foreach (string c in coords)
             {
-                c.Trim();               
-                
+                c.Trim();
+
                 if (c[0] == 'L')
                 {
-                    num = int.Parse(c.Trim('L'));                    
+                    num = int.Parse(c.Trim('L'));
 
                     switch (dir)
                     {
                         case ('n'):
                             dir = 'w';
-                                                     
-                            for(int i = 1; i <= num; i++)
+
+                            for (int i = 1; i <= num; i++)
                             {
                                 xpos--;
                                 loc = ("" + xpos + " " + ypos);
-                                if (locs.Contains(loc)){
-                                    Console.WriteLine("Found it:" + loc);
-                                    break;
+                                if (locs.Contains(loc))
+                                {
+                                    Console.WriteLine("Found it:" + loc);                                    
                                 }
                                 locs.Add(loc);
                             }
@@ -65,8 +65,7 @@ namespace AdventOfCode
                                 loc = ("" + xpos + " " + ypos);
                                 if (locs.Contains(loc))
                                 {
-                                    Console.WriteLine("Found it:" + loc);
-                                    break;
+                                    Console.WriteLine("Found it:" + loc);                                    
                                 }
                                 locs.Add(loc);
                             }
@@ -81,8 +80,7 @@ namespace AdventOfCode
                                 loc = ("" + xpos + " " + ypos);
                                 if (locs.Contains(loc))
                                 {
-                                    Console.WriteLine("Found it:" + loc);
-                                    break;
+                                    Console.WriteLine("Found it:" + loc);                               
                                 }
                                 locs.Add(loc);
                             }
@@ -98,7 +96,6 @@ namespace AdventOfCode
                                 if (locs.Contains(loc))
                                 {
                                     Console.WriteLine("Found it:" + loc);
-                                    break;
                                 }
                                 locs.Add(loc);
                             }
@@ -112,7 +109,7 @@ namespace AdventOfCode
 
                 else if (c[0] == 'R')
                 {
-                    num = int.Parse(c.Trim(toTrim));                  
+                    num = int.Parse(c.Trim(toTrim));
 
                     switch (dir)
                     {
@@ -125,7 +122,6 @@ namespace AdventOfCode
                                 if (locs.Contains(loc))
                                 {
                                     Console.WriteLine("Found it:" + loc);
-                                    break;
                                 }
                                 locs.Add(loc);
                             }
@@ -141,7 +137,6 @@ namespace AdventOfCode
                                 if (locs.Contains(loc))
                                 {
                                     Console.WriteLine("Found it:" + loc);
-                                    break;
                                 }
                                 locs.Add(loc);
                             }
@@ -157,7 +152,6 @@ namespace AdventOfCode
                                 if (locs.Contains(loc))
                                 {
                                     Console.WriteLine("Found it:" + loc);
-                                    break;
                                 }
                                 locs.Add(loc);
                             }
@@ -173,7 +167,6 @@ namespace AdventOfCode
                                 if (locs.Contains(loc))
                                 {
                                     Console.WriteLine("Found it:" + loc);
-                                    break;
                                 }
                                 locs.Add(loc);
                             }
@@ -185,10 +178,10 @@ namespace AdventOfCode
                     }
 
                 }
-                else break;                 
-            }           
+                else break;
+            }
             total = (Math.Abs(xpos) + Math.Abs(ypos));
-            Console.WriteLine("The total distance is " + xpos +" horizontally and "+ ypos +" vertically, " + total + " total");         
+            Console.WriteLine("The total distance is " + xpos + " horizontally and " + ypos + " vertically, " + total + " total");
             Console.ReadLine();
         }
     }
