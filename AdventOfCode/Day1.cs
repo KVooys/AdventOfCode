@@ -44,9 +44,7 @@ namespace AdventOfCode
                                     Console.WriteLine("Found it:" + loc);
                                 }
                                 locs.Add(loc);
-                            }
-                            //xpos -= num;  
-                            //locs.Add("" + xpos + " " + ypos);
+                            }                           
                             break;
                         case ('e'):
                             dir = 'n';
@@ -60,8 +58,6 @@ namespace AdventOfCode
                                 }
                                 locs.Add(loc);
                             }
-                            //ypos += num;
-                            //locs.Add("" + xpos + " " + ypos);
                             break;
                         case ('w'):
                             dir = 's';
@@ -75,8 +71,6 @@ namespace AdventOfCode
                                 }
                                 locs.Add(loc);
                             }
-                            //ypos -= num;
-                            //locs.Add("" + xpos + " " + ypos);
                             break;
                         case ('s'):
                             dir = 'e';
@@ -90,8 +84,6 @@ namespace AdventOfCode
                                 }
                                 locs.Add(loc);
                             }
-                            //xpos += num;
-                            //locs.Add("" + xpos + " " + ypos);
                             break;
                         default:
                             break;
@@ -116,8 +108,6 @@ namespace AdventOfCode
                                 }
                                 locs.Add(loc);
                             }
-                            //xpos += num;
-                            //locs.Add("" + xpos + " " + ypos);
                             break;
                         case ('e'):
                             dir = 's';
@@ -131,8 +121,6 @@ namespace AdventOfCode
                                 }
                                 locs.Add(loc);
                             }
-                            //ypos -= num;
-                            //locs.Add("" + xpos + " " + ypos);
                             break;
                         case ('w'):
                             dir = 'n';
@@ -146,8 +134,6 @@ namespace AdventOfCode
                                 }
                                 locs.Add(loc);
                             }
-                            //ypos += num;
-                            //locs.Add("" + xpos + " " + ypos);
                             break;
                         case ('s'):
                             dir = 'w';
@@ -161,8 +147,6 @@ namespace AdventOfCode
                                 }
                                 locs.Add(loc);
                             }
-                            //xpos -= num;
-                            //locs.Add("" + xpos + " " + ypos);
                             break;
                         default:
                             break;
