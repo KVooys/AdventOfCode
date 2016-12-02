@@ -10,9 +10,8 @@ namespace AdventOfCode
     class Program
     {
         static void Main(string[] args)
-        {
-            //Day1();
-            Day1.Main();
+        {           
+            Day2.Keypad2();
         }       
     }
 }
