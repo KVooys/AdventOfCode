@@ -24,7 +24,7 @@ namespace AdventOfCode
             int pos = 0;
                  
 
-            string[] lines = File.ReadAllLines(@"C: \Users\Kurt\Desktop\input2.txt");
+            string[] lines = File.ReadAllLines(@"C:\Users\Kurt\Documents\Visual Studio 2015\Projects\AdventOfCode\input2.txt");
             foreach (string s in lines)
             {
                 //loop over chars in string
@@ -83,7 +83,7 @@ namespace AdventOfCode
             int x = 2;
             int y = 2;
             char pos = '#';
-            string[] lines = File.ReadAllLines(@"C: \Users\Kurt\Desktop\input2.txt");
+            string[] lines = File.ReadAllLines(@"C:\Users\Kurt\Documents\Visual Studio 2015\Projects\AdventOfCode\input2.txt");
             foreach (string s in lines)
             {
                 //loop over chars in string

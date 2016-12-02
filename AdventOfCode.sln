@@ -8,7 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A283D14D-B528-4866-A4E8-4189A7BFE293}"
 	ProjectSection(SolutionItems) = preProject
 		input.txt = input.txt
-		..\..\..\..\Desktop\input2.txt = ..\..\..\..\Desktop\input2.txt
+		input2.txt = input2.txt
 	EndProjectSection
 EndProject
 Global
