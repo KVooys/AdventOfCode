@@ -29,7 +29,6 @@ namespace AdventOfCode
         static uint cipher;
         static uint unicode;
         static char realtext;        
-        static string check = "North Pole";
         static string decodedsentence;
         static List<string> output = new List<string>();
 
@@ -54,12 +53,17 @@ namespace AdventOfCode
                
                 Console.WriteLine(name);
                 Console.WriteLine(number);
-                Part2();
-                File.WriteAllLines(@"C: \Users\Kurt\Documents\Visual Studio 2015\Projects\AdventOfCode\output.txt", output);
-                /*CountLetters();
+
+                //Part 1 execution
+                CountLetters();
                 if (Check()) total += number;               
                 Reset();
-                */
+                
+
+                //part 2 execution
+                Part2();
+                File.WriteAllLines(@"C: \Users\Kurt\Documents\Visual Studio 2015\Projects\AdventOfCode\output.txt", output);
+                
             }
             Console.WriteLine("The sum of real room IDs is " + total);
             Console.ReadLine();
