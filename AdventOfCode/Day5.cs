@@ -43,6 +43,7 @@ namespace AdventOfCode
             Console.WriteLine(pw2);
             Console.ReadLine();
         }
+        
 
         //part of the 1st solution
         public static void AddToPw()
