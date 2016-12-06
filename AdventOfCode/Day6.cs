@@ -32,22 +32,39 @@ namespace AdventOfCode
         static Dictionary<char, int> letterCount;
         static string curcol = "";
         static string pw;
+        static string pw2;
         static int curmax;
+        static int curmin;
         static int iter;
 
         public static void Main()
         {
-            //place every first char of a string into the first char of a column
+            //place every char of a string into a column
             StringsToColumns();
 
             foreach (string s in columns)
             {
                 curcol = s;
                 CountLetters();
-                //Console.WriteLine(s);
+                CountLettersPart2();              
             }
             Console.WriteLine(pw);
+            Console.WriteLine(pw2);
             Console.ReadLine();
+        }
+
+        //place every char of a string into the string[i]th column
+        public static void StringsToColumns()
+        {
+            foreach (string line in lines)
+            {
+                iter = 0;
+                foreach (char c in line)
+                {
+                    columns[iter] += c;
+                    iter++;
+                }
+            }
         }
 
         public static void CountLetters()
@@ -78,16 +95,30 @@ namespace AdventOfCode
             }
         }
 
-        //place every char of a string into the string[i]th column
-        public static void StringsToColumns()
+        public static void CountLettersPart2()
         {
-            foreach (string line in lines)
-            {              
-                iter = 0;
-                foreach (char c in line)
+            letterCount = new Dictionary<char, int>();
+
+            //add letters and their occurrence to a dictionary
+            foreach (char c in curcol)
+            {
+                if (letterCount.ContainsKey(c))
                 {
-                    columns[iter] += c;
-                    iter++;
+                    letterCount[c]++;
+                }
+                else letterCount.Add(c, 1);
+            }
+
+            //redefine the min amount a letter occurs
+            curmin = letterCount.Values.Min();
+
+            //check if the character is the least occurring character and if so, add it to the 2nd password
+            foreach (char c in curcol)
+            {
+                if (letterCount[c] == curmin)
+                {
+                    pw2 += c;
+                    break;
                 }
             }
         }
