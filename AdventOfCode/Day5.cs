@@ -9,15 +9,15 @@ namespace AdventOfCode
         static MD5 md5 = System.Security.Cryptography.MD5.Create();
         static StringBuilder sb = new StringBuilder();
         static StringBuilder pw = new StringBuilder();
-        static StringBuilder pw2 = new StringBuilder();      
+        static StringBuilder pw2 = new StringBuilder();
         static string id = "ffykfhsq"; //this id is the only input for today
-        static string tohash = "";       
+        static string tohash = "";
         static byte[] inputBytes;
         static byte[] hash;
         static char curpos;
         static int num;
         static int found = 0;
-        
+
         public static void Main()
         {
             for (int i = 0; i < int.MaxValue; i++)
@@ -37,13 +37,13 @@ namespace AdventOfCode
                         {
                             break;
                         }
-                    }                             
+                    }
                 }
             }
             Console.WriteLine(pw2);
             Console.ReadLine();
         }
-        
+
 
         //part of the 1st solution
         public static void AddToPw()
@@ -51,7 +51,7 @@ namespace AdventOfCode
             //add the 6th character to our password
             pw.Append(sb[5]);
             found++;
-            sb.Clear();     
+            sb.Clear();
         }
 
         //part of the 2nd solution
@@ -75,13 +75,13 @@ namespace AdventOfCode
             //check if 5 zeroes
             if (sb.ToString().Substring(0, 5).Equals("00000"))
             {
-                return true;               
+                return true;
             }
             else
             {
                 sb.Clear();
                 return false;
-            }           
+            }
         }
 
         //checks if the position is a number, then if the number is between 0 and 7
@@ -108,7 +108,7 @@ namespace AdventOfCode
             {
                 sb.Clear();
                 return false;
-            } 
+            }
         }
     }
 }
