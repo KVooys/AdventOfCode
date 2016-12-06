@@ -29,8 +29,7 @@ namespace AdventOfCode
                 if (CheckIfFiveZeroes())
                 {
                     //AddToPw();
-                    if (IsRealPosition())
-                    {
+                    if (IsRealPosition())                    {
                         AddToPw2();
                         //once we have enough numbers to find all the keys, we can stop looping
                         if (found == 25)
