@@ -16,6 +16,8 @@ namespace AdventOfCode
         static string nobracks = "";
         static string substr1 = "";
         static string substr2 = "";
+        static string aba = "";
+        static string bab = "";
         static int count = 0;
 
         public static void Main()
@@ -27,7 +29,8 @@ namespace AdventOfCode
                 //put the rest in nobracks
                 nobracks = Regex.Replace(s, @"\[(\w+)\]", "");
                 Console.WriteLine(nobracks);
-                
+
+                /*//Part 1 here
                 //only count occurrences where the betweenbracks do not produce abba, but the entire string does
                 if (CheckIfAbba(betweenbracks) == false)
                 {
@@ -35,7 +38,15 @@ namespace AdventOfCode
                     {
                         count++;
                     }
-                }
+                }               
+                */
+
+                //Part 2 here
+                if (CheckAba(nobracks)) {
+                    count++;
+                } 
+
+                //clean up when done
                 betweenbracks = "";
             }
             Console.WriteLine(count);
@@ -73,21 +84,23 @@ namespace AdventOfCode
 
         public static bool CheckAba(string s)
         {
-            for (int i = 0; i < s.Length - 3; i++)
+            for (int i = 0; i < s.Length - 2; i++)
             {
                 //make 2 substrings out of the first 3 characters to compare
                 substr1 = s.Substring(i, 2);
-                substr2 = ""+ s[i + 2];
+                substr2 = s.Substring(i + 2, 1);
+                aba = substr1 + substr2;
+                bab = "" + substr1[1] + substr2 + substr1[1];
 
-                //check if the substrings are inverse of one another and are not all the same letter
-                if (substr1[0].Equals(substr2[1]) && (substr2[0].Equals(substr1[1])) && !(substr1[0].Equals(substr1[1])))
+                //check if the substrings are aba
+                if (substr1[0].Equals(substr2[0]) && !(substr1[0].Equals(substr1[1])))
                 {
-                    Console.WriteLine(substr1 + substr2);
-                    return true;
+                    //check if the corresponding bab is present in the bracks       
+                    if (betweenbracks.Contains(bab)){                      
+                        return true;
+                    }                 
                 }
             }
-                
-
             return false;
         }
     }
