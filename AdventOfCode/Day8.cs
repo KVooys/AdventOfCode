@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+////challenge: http://adventofcode.com/2016/day/8
+
 namespace AdventOfCode
 {
     class Day8
