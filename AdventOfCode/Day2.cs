@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+//challenge: http://adventofcode.com/2016/day/2
 namespace AdventOfCode
 {
     class Day2
