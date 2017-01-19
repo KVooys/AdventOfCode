@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 
+//challenge: http://adventofcode.com/2016/day/3
+
 namespace AdventOfCode
 {
     class Day3
