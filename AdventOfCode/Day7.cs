@@ -6,6 +6,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.IO;
 
+//challenge: http://adventofcode.com/2016/day/7
+
 namespace AdventOfCode
 {
     class Day7
