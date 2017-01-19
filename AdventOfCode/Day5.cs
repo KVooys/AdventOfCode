@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
+//challenge: http://adventofcode.com/2016/day/5
 namespace AdventOfCode
 {
     class Day5
