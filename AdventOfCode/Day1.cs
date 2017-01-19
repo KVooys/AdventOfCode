@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 
+//challenge: http://adventofcode.com/2016/day/1
+
 namespace AdventOfCode
 {
     public static class Day1
